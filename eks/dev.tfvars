@@ -1,0 +1,11 @@
+ws_name = "dev"
+vpc_cidr="10.0.0.0/16"
+pub_subnet1="10.0.1.0/24"
+pub_subnet2="10.0.2.0/24"
+priv_subnet1="10.0.3.0/24"
+priv_subnet2="10.0.4.0/24"
+region="us-east-1"
+ami="ami-053b0d53c279acc90"
+nodes_desired_size = 1
+nodes_max_size = 1
+nodes_min_size = 1
