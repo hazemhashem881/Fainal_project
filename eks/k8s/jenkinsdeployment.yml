@@ -35,6 +35,16 @@ spec:
               mountPath: /var/jenkins_home
             - mountPath: /var/run/docker.sock
               name: docker-socket
+      # initContainers:
+      # - name: change-permisions
+      #   image: busybox
+      #   command: ["/bin/chmod","777", "/var/run/docker.sock"]
+      #   securityContext:
+      #     runAsUser: 0
+      #     privileged: true
+      #   volumeMounts:
+      #   - name: docker-socket
+      #     mountPath: /var/run/docker.sock
       volumes:
         - name: jenkins-data
           persistentVolumeClaim:

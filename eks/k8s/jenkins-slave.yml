@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: jenkins-slave
+  namespace: jenkins
+  labels:
+    app: jenkins-slave
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: jenkins-slave
+  template:
+    metadata:
+      labels:
+        app: jenkins-slave
+    spec:
+      serviceAccountName: jenkins-admin
+      securityContext:
+            fsGroup: 0 
+            runAsUser: 0
+      containers:
+        - name: jenkins-slave
+          image: hazemhashem100/jenkins-agent
+          stdin: true
+          tty: true
+          ports:
+            - containerPort: 22
+          volumeMounts:
+            - mountPath: /var/run/docker.sock
+              name: docker-socket
+      restartPolicy: Always
+      volumes:
+        - name: docker-socket
+          hostPath:
+            path: /var/run/docker.sock

@@ -16,3 +16,6 @@ variable "priv_subnet1" {
 variable "priv_subnet2" {
   type = string
 }
+variable "ws_name" {
+  type = string
+}

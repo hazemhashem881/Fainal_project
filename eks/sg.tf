@@ -1,7 +1,7 @@
-resource "aws_security_group" "worker_sg" {
-  name        = "worker_sg"
+resource "aws_security_group" "allow_ssh" {
+  name        = "allow_ssh"
   description = "Allow ssh inbound traffic"
-  vpc_id      = var.vpc_id
+  vpc_id      = module.network.vpc_id
 
   ingress {
     description      = "SSH from VPC"

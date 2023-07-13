@@ -33,3 +33,14 @@ variable "nodes_max_size" {
 variable "nodes_min_size" {
     type = string
 }
+variable "ssh_key" {
+  type = string
+}
+variable "instance_type" {
+  type = string
+}
+variable "disk_size" {
+  description = "Disk size for worker nodes"
+  type        = number
+  default     = 20 
+}
