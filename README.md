@@ -36,7 +36,7 @@ terraform init
 ```
 > then Check Plan
 ```
-terraform plan
+terraform plan --var-file dev.tfvars
 ```
 > then Apply the Apply
 ```
