@@ -77,12 +77,12 @@ cd k8s
 ```
 kubectl logs -n <namespace> <pod_name>  
 ```
-### 7. Get `admin` user Password
+### 7. Get `url` of jenkins
 
 ```
-kubectl logs -n <namespace> <pod_name>  
+kubectl get -n <namespace> svc 
 ```
-### 8. copy external ip of jenkins master 
+### 8. copy external ip of jenkins master from
 
 ```
 kubectl get -n <namespace> svc   
