@@ -103,4 +103,4 @@ cat id_rsa.pub > authorized_keys
 ```
 https://github.com/hazemhashem881/CI-CD_k8s
 ```
-# This is my video to see running this steps [video OF Project]()
+# This is url of video of running that steps [video OF Project]()
