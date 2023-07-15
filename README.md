@@ -103,4 +103,4 @@ cat id_rsa.pub > authorized_keys
 ```
 https://github.com/hazemhashem881/CI-CD_k8s
 ```
-# This is url of video of running that steps [video OF Project]()
+# This is url of video of running that steps [video OF Project](https://www.linkedin.com/posts/hazem-hashem-b38515237_jenkins-aws-terraform-activity-7085948253778640896-5ymC?utm_source=share&utm_medium=member_desktop)
